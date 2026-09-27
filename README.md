@@ -10,7 +10,30 @@
 > 3.使用Github Actions托管（相比云函数来讲非常推荐，因为有日志会存储，而且也免费）
 >
 > 4.使用家用NAS面板部署
->
+
+## 获取森空岛 Token
+
+1. 使用浏览器登录[森空岛官网](https://www.skland.com/)
+
+  <p align="center"><img src="./assets/img1.png" alt="森空岛官网" width="70%"></p>
+
+
+2. 保持登录状态，访问 <https://web-api.skland.com/account/info/hg>
+3. 页面会返回 JSON。找到 `data.content` 字段，只复制它的字符串值(英文双引号直接的内容)，不要复制字段名、引号或整段 JSON
+   
+  <p align="center"><img src="./assets/img2.png" alt="复制 Token" width="70%"></p>
+
+返回内容的结构大致如下，其中 `这里才是需要复制的Token` 是示例占位符：
+
+```json
+{
+  "code": 0,
+  "data": {
+    "content": "这里才是需要复制的Token" // 不要复制双引号
+  },
+  "msg": "..."
+}
+```
 
 ## 快速导航
 
